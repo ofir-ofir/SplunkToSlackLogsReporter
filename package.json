@@ -1,0 +1,7 @@
+{
+  "name": "splunk-to-slack-reporter-chrome-extension",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ofirtz",
+  "license": "MIT"
+}
