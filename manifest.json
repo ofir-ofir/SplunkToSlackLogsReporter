@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Splunk to Slack",
+  "version": "1.0",
+  "description": "Send specific Splunk logs to Slack via webhook",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://mtg.splunkcloud.com/*",
+    "https://hooks.slack.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://mtg.splunkcloud.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon.png"
+  }
+}
