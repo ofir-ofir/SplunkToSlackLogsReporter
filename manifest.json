@@ -9,7 +9,7 @@
     "scripting"
   ],
   "host_permissions": [
-    "*://mtg.splunkcloud.com/*",
+    "*://*.splunkcloud.com/*",
     "https://hooks.slack.com/*"
   ],
   "action": {
@@ -25,7 +25,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://mtg.splunkcloud.com/*"],
+      "matches": ["*://*.splunkcloud.com/*"],
       "js": ["content.js"]
     }
   ],
